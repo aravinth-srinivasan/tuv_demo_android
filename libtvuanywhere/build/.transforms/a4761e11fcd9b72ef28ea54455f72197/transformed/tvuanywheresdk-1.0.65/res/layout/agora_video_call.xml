@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/agora_video_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/agora_video_view_bg_color"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:id="@+id/agora_control_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/agora_video_layout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/agora_end_call_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/agora_mix_audio_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/agora_end_call"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_agora_end_call_svg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/agora_mix_audio_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/agora_control_speaker_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/agora_end_call_layout">
+
+                <ImageView
+                    android:id="@+id/agora_mix_audio"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/ic_agora_talk_off_svg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/agora_control_speaker_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/agora_control_local_video_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/agora_mix_audio_layout">
+
+                <ImageView
+                    android:id="@+id/agora_control_speaker"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_agora_turn_speaker_on_svg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/agora_control_local_video_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/agora_control_local_audio_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/agora_control_speaker_layout">
+
+                <ImageView
+                    android:id="@+id/agora_control_local_video"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_agora_enable_video_svg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/agora_control_local_audio_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/agora_control_local_camera_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/agora_control_local_video_layout">
+
+                <ImageView
+                    android:id="@+id/agora_control_local_audio"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_agora_enable_audio_svg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/agora_control_local_camera_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/agora_raise_hand_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/agora_control_local_audio_layout">
+
+                <ImageView
+                    android:id="@+id/agora_control_local_camera"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:src="@drawable/ic_agora_switch_camera"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/agora_raise_hand_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/agora_talk_back_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/agora_control_local_camera_layout">
+
+                <ImageView
+                    android:id="@+id/agora_raise_hand"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_agora_raise_hand_default_svg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/agora_talk_back_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/chat_image_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/agora_raise_hand_layout">
+
+                <ImageView
+                    android:id="@+id/iv_agora_talk_back"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/ic_agora_talk_back_off_svg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/chat_image_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/agora_go_back_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/agora_talk_back_layout">
+
+                <ImageView
+                    android:id="@+id/iv_agora_chat"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/ic_agora_chat_svg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/agora_go_back_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/chat_image_layout">
+
+                <ImageView
+                    android:id="@+id/agora_go_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_agora_go_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <GridLayout
+        android:id="@+id/agora_video_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/agora_control_layout"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.tvunetworks.android.anywhere.agora.AGVideoViewItem
+            android:id="@+id/agora_video_view_1_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowSpan="2"
+            android:layout_rowWeight="1"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="1" />
+
+        <com.tvunetworks.android.anywhere.agora.AGVideoViewItem
+            android:id="@+id/agora_video_view_6_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1" />
+
+        <com.tvunetworks.android.anywhere.agora.AGVideoViewItem
+            android:id="@+id/agora_video_view_5_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1" />
+
+        <com.tvunetworks.android.anywhere.agora.AGVideoViewItem
+            android:id="@+id/agora_video_view_2_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1" />
+
+        <com.tvunetworks.android.anywhere.agora.AGVideoViewItem
+            android:id="@+id/agora_video_view_3_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1">
+
+            <com.tvunetworks.android.anywhere.agora.AGPrivateChannelView
+                android:id="@+id/private_layout_normal_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:visibility="invisible" />
+        </com.tvunetworks.android.anywhere.agora.AGVideoViewItem>
+
+        <com.tvunetworks.android.anywhere.agora.AGVideoViewItem
+            android:id="@+id/agora_video_view_4_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/tv_output_source"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="@dimen/default_padding"
+        android:layout_marginTop="@dimen/default_padding"
+        android:background="@color/red"
+        android:elevation="@dimen/default_padding"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingStart="4dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="2dp"
+        android:singleLine="true"
+        android:text="PGM"
+        android:textColor="@color/agora_edit_nickname_hint_color"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/agora_video_layout"
+        app:layout_constraintTop_toTopOf="@id/agora_video_layout" />
+
+    <TextView
+        android:id="@+id/tv_agora_speaker_name"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="@dimen/default_padding"
+        android:layout_marginTop="@dimen/default_padding"
+        android:background="@drawable/agora_show_nickname_bg"
+        android:elevation="@dimen/default_padding"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="Speaker"
+        android:textColor="@color/agora_edit_nickname_hint_color"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/tv_output_source"
+        app:layout_constraintTop_toTopOf="@id/agora_video_layout" />
+
+    <TextView
+        android:id="@+id/tv_agora_live_status"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="@dimen/default_padding"
+        android:layout_marginTop="@dimen/default_padding"
+        android:background="@drawable/live_status_bg"
+        android:elevation="@dimen/default_padding"
+        android:gravity="center"
+        android:text="@string/live_status_live"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/tv_agora_speaker_name"
+        app:layout_constraintTop_toTopOf="@id/agora_video_layout" />
+
+    <TextView
+        android:id="@+id/tv_agora_voip_status"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="@dimen/default_padding"
+        android:layout_marginTop="@dimen/default_padding"
+        android:background="@drawable/tvu_voice_bg"
+        android:elevation="@dimen/default_padding"
+        android:gravity="center"
+        android:text="@string/str_tvu_voice"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/tv_agora_live_status"
+        app:layout_constraintTop_toTopOf="@id/agora_video_layout" />
+
+    <ImageView
+        android:id="@+id/iv_full_screen_pip_mode"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="@dimen/default_padding"
+        android:background="@drawable/agora_full_screen_in_pip_mode_bg"
+        android:src="@drawable/ic_agora_enter_full_screen_svg"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tvunetworks.android.anywhere.agora.AGVideoViewItem
+        android:id="@+id/agora_video_view_speaker_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/agora_video_view_questionspeaker_layout"
+        app:layout_constraintEnd_toEndOf="@id/agora_video_layout"
+        app:layout_constraintTop_toTopOf="@id/agora_video_layout" />
+
+    <com.tvunetworks.android.anywhere.agora.AGVideoViewItem
+        android:id="@+id/agora_video_view_questionspeaker_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/agora_video_view_pip_layout"
+        app:layout_constraintEnd_toEndOf="@id/agora_video_layout"
+        app:layout_constraintTop_toBottomOf="@id/agora_video_view_speaker_layout">
+
+        <com.tvunetworks.android.anywhere.agora.AGPrivateChannelView
+            android:id="@+id/private_questionspeaker_pip_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="invisible" />
+    </com.tvunetworks.android.anywhere.agora.AGVideoViewItem>
+
+    <com.tvunetworks.android.anywhere.agora.AGVideoViewItem
+        android:id="@+id/agora_video_view_pip_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/agora_video_layout"
+        app:layout_constraintEnd_toEndOf="@id/agora_video_layout"
+        app:layout_constraintTop_toBottomOf="@id/agora_video_view_questionspeaker_layout">
+
+        <com.tvunetworks.android.anywhere.agora.AGPrivateChannelView
+            android:id="@+id/private_layout_pip_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="invisible" />
+    </com.tvunetworks.android.anywhere.agora.AGVideoViewItem>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/adjust_pgm_volume_layout"
+        android:layout_width="38dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/default_padding"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/agora_adjust_pgm_volume_bg"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/agora_video_layout"
+        app:layout_constraintTop_toTopOf="@id/agora_video_layout">
+
+        <SeekBar
+            android:id="@+id/adjust_pgm_volume_seekbar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:max="100"
+            android:progressDrawable="@drawable/beauty_bar_background"
+            android:rotation="-90"
+            android:thumb="@drawable/circle_thumb"
+            app:layout_constraintBottom_toTopOf="@+id/iv_mute_pgm_audio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_mute_pgm_audio"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:src="@drawable/ic_vfb_sound_off"
+            app:layout_constraintBottom_toTopOf="@+id/iv_full_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_full_screen"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="@dimen/default_padding"
+            android:src="@drawable/ic_agora_enter_full_screen_svg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/agora_sharing_screen_name_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/agora_video_layout">
+
+        <TextView
+            android:id="@+id/tv_sharing_screen_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/agora_sharing_screen_left_bg"
+            android:drawableStart="@drawable/ic_agora_sharing_screen_svg"
+            android:ellipsize="end"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:textColor="@color/agora_edit_nickname_hint_color"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

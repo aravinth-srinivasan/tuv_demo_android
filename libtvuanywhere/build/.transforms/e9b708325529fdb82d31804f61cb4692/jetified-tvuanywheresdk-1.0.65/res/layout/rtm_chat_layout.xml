@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rtm_chat_left_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toStartOf="@+id/rtm_chat_right_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.3">
+
+        <ExpandableListView
+            android:id="@+id/expandable_list_view_chat_members"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:childDivider="@android:color/transparent"
+            android:divider="@android:color/transparent"
+            android:groupIndicator="@null"
+            android:listSelector="@android:color/transparent"
+            app:layout_constraintBottom_toTopOf="@+id/btn_rtm_new_message"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_rtm_new_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="start|center_vertical"
+            android:paddingStart="@dimen/default_padding"
+            android:paddingEnd="@dimen/default_padding"
+            android:text="@string/str_new_message"
+            android:textAllCaps="false"
+            android:textColor="?android:attr/textColorHint"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rtm_chat_right_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="#2B2F36"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rtm_chat_left_layout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_rtm_chat_title"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:background="@drawable/view_bg_with_bottom_line"
+            android:gravity="center_vertical"
+            android:text="Group chat"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_cancel_rtm_dialog"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_cancel_choose_receiver"
+            app:layout_constraintBottom_toBottomOf="@id/tv_rtm_chat_title"
+            app:layout_constraintEnd_toEndOf="@id/tv_rtm_chat_title"
+            app:layout_constraintTop_toTopOf="@id/tv_rtm_chat_title"
+            app:layout_constraintWidth_percent="0.1" />
+
+        <EditText
+            android:id="@+id/et_rtm_input_chat_message"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/view_bg_with_top_line"
+            android:hint="Message Host and Speaker"
+            android:inputType="textEmailAddress|textMultiLine"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/default_padding"
+            android:paddingEnd="40dp"
+            android:paddingBottom="@dimen/default_padding"
+            android:singleLine="false"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_rtm_send_message"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/rtm_send_messsage_view_selector"
+            app:layout_constraintBottom_toBottomOf="@id/et_rtm_input_chat_message"
+            app:layout_constraintEnd_toEndOf="@id/et_rtm_input_chat_message"
+            app:layout_constraintTop_toTopOf="@id/et_rtm_input_chat_message"
+            app:layout_constraintWidth_percent="0.1" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_rtm_message_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/et_rtm_input_chat_message"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_rtm_chat_title" />
+
+        <ProgressBar
+            android:id="@+id/rtm_loading_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/et_rtm_input_chat_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_rtm_chat_title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

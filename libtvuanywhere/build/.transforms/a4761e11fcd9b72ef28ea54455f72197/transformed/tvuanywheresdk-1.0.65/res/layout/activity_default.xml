@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_live_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/live_status_bg"
+            android:gravity="center"
+            android:text="@string/live_status_live"
+            android:textColor="#ffffffff"
+            android:textSize="12sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/top_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/top_status" />
+
+        <TextView
+            android:id="@+id/tv_tvu_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:background="@drawable/tvu_voice_bg"
+            android:gravity="center"
+            android:text="@string/str_tvu_voice"
+            android:textColor="#ffffffff"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/tv_live_status"
+            app:layout_constraintTop_toBottomOf="@+id/top_status" />
+
+        <ImageView
+            android:id="@+id/iv_encrypt_lock"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_encrypt_lock_svg"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/top_status"
+            app:layout_constraintEnd_toStartOf="@+id/top_status"
+            app:layout_constraintTop_toTopOf="@+id/top_status" />
+
+        <TextView
+            android:id="@+id/tv_recording_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/record_status_bg"
+            android:text="@string/recording_prompt"
+            android:textColor="#FF4B4B"
+            android:textSize="14sp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@id/tv_live_status"
+            app:layout_constraintTop_toBottomOf="@id/tv_tvu_voice" />
+
+        <include
+            android:id="@+id/top_status"
+            layout="@layout/top_status"
+            android:layout_width="460dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.tvunetworks.android.activity.PopMessageView
+            android:id="@+id/popUpMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/right_control_panel"
+            layout="@layout/right_control_panel"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.tvunetworks.android.anywhere.component.ShadowImageView
+            android:id="@+id/iv_hungup_voice"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_hung_up_voice"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/right_control_panel"
+            app:sv_shadow_mode="3"
+            app:sv_shadow_offset="1dp" />
+
+        <com.tvunetworks.android.anywhere.component.ShadowImageView
+            android:id="@+id/back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:sv_shadow_mode="3"
+            app:sv_shadow_offset="1dp" />
+
+        <TextView
+            android:id="@+id/tv_pid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="123456789"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_live_status" />
+
+        <include
+            android:id="@+id/switch_to_partyline"
+            layout="@layout/agora_switch_back_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

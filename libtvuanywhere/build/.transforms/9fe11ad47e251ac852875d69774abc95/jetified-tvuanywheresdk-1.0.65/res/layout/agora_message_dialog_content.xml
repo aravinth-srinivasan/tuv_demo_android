@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/default_padding">
+
+    <TextView
+        android:id="@+id/tv_message_dialog_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The host wants to turn on your camera"
+        android:textColor="#28282E"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_message_dialog_agree"
+        android:layout_width="63dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/default_padding"
+        android:background="@drawable/agora_agree_operation_btn_shape"
+        android:text="Admit"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_message_dialog_content" />
+
+    <Button
+        android:id="@+id/btn_message_dialog_cancel"
+        android:layout_width="36dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="28dp"
+        android:background="@null"
+        android:text="Deny"
+        android:textAllCaps="false"
+        android:textColor="#555661"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_message_dialog_agree"
+        app:layout_constraintEnd_toStartOf="@id/btn_message_dialog_agree"
+        app:layout_constraintTop_toTopOf="@id/btn_message_dialog_agree" />
+</androidx.constraintlayout.widget.ConstraintLayout>

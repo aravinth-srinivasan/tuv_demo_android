@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.tvunetworks.android.anywhere.tvuscan.mlkit.CameraSourcePreview
+        android:id="@+id/preview_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <com.tvunetworks.android.anywhere.tvuscan.base.GraphicOverlay
+        android:id="@+id/graphic_overlay"
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <LinearLayout
+        android:id="@+id/pair_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/viewfinder_mask"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <EditText
+            android:id="@+id/et_enter_code"
+            style="@style/InputEditText"
+            android:hint="@string/str_enter_code_hint"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btn_apply_pair"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/margin_bottom"
+            android:background="@drawable/tvu_scan_pair_btn_style"
+            android:text="@string/str_button_apply"
+            android:textAppearance="?android:attr/textAppearance"
+            android:textColor="@color/encode_view" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/extra_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/viewfinder_mask"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <EditText
+            android:id="@+id/et_enter_phone"
+            style="@style/InputEditText"
+            android:hint="@string/str_enter_phone_hint"
+            android:inputType="phone"
+            android:maxLength="32" />
+
+        <EditText
+            android:id="@+id/et_enter_extra"
+            style="@style/InputEditText"
+            android:layout_marginBottom="0dp"
+            android:hint="@string/str_enter_extra_info_hint"
+            android:maxLength="128" />
+
+        <Button
+            android:id="@+id/btn_next_step"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/margin_bottom"
+            android:background="@drawable/tvu_scan_pair_btn_style"
+            android:text="@string/str_button_next"
+            android:textAppearance="?android:attr/textAppearance"
+            android:textColor="@color/encode_view" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scan_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|center"
+        android:background="@color/result_view"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/standard_padding"
+        android:paddingTop="@dimen/standard_padding">
+
+        <Button
+            android:id="@+id/btn_scan_qr"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_bottom"
+            android:layout_weight="0.5"
+            android:background="@null"
+            android:drawableTop="@drawable/tvu_scan_ic_light"
+            android:text="@string/str_button_scan"
+            android:textColor="@color/button_below_text"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_input_license"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_bottom"
+            android:layout_weight="0.5"
+            android:background="@null"
+            android:drawableTop="@drawable/tvu_scan_ic_input_white"
+            android:text="@string/str_button_enter"
+            android:textColor="@color/result_text"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_margin="@dimen/standard_padding">
+
+        <ImageView
+            android:id="@+id/cancel_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:clickable="true"
+            android:onClick="onCancel"
+            android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <ImageView
+            android:id="@+id/image_pick_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:clickable="true" />
+    </RelativeLayout>
+</merge>

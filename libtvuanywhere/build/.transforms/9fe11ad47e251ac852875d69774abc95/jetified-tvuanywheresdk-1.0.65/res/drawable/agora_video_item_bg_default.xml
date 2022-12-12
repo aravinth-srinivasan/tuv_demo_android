@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/agora_video_item_bg_color" />
+            <stroke
+                android:width="0.1dp"
+                android:color="@android:color/black" />
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/tvu_dark_logo" />
+    </item>
+</layer-list>

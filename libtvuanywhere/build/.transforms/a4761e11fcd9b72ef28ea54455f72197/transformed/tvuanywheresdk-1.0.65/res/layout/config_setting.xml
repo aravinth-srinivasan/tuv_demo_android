@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_us"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/str_config_us" />
+
+            <Button
+                android:id="@+id/btn_cn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/str_config_cn" />
+
+            <Button
+                android:id="@+id/btn_qa"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/str_config_qa" />
+
+            <Button
+                android:id="@+id/btn_rd"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/str_config_rd" />
+
+            <Button
+                android:id="@+id/btn_ali"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/str_config_ali" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView_ps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_configuration_peerservice" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/textView_ps"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_psIp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:enabled="false"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/str_hint_ip"
+                    android:imeOptions="flagNoExtractUi"
+                    android:text="@string/release_peerservice_ip" />
+
+                <EditText
+                    android:id="@+id/et_psPort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:enabled="false"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/str_hint_port"
+                    android:imeOptions="flagNoExtractUi"
+                    android:text="@string/release_peerservice_port" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView_msgpipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_configuration_msgpipe" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/textView_msgpipe"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_msgpipeIp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:enabled="false"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/str_hint_ip"
+                    android:imeOptions="flagNoExtractUi"
+                    android:text="@string/release_msgpipe_ip" />
+
+                <EditText
+                    android:id="@+id/et_msgpipePort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:enabled="false"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/str_hint_port"
+                    android:imeOptions="flagNoExtractUi"
+                    android:text="@string/release_msgpipe_port" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView_token"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_configuration_token" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/textView_token"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_tokenIp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:enabled="false"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/str_hint_ip"
+                    android:imeOptions="flagNoExtractUi"
+                    android:text="@string/release_token_ip" />
+
+                <EditText
+                    android:id="@+id/et_tokenPort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:enabled="false"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/str_hint_port"
+                    android:imeOptions="flagNoExtractUi"
+                    android:text="@string/release_token_port" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView_blob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_configuration_blob" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/textView_blob"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_blobIp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:enabled="false"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/str_hint_ip"
+                    android:imeOptions="flagNoExtractUi"
+                    android:text="@string/release_blob_ip" />
+
+                <EditText
+                    android:id="@+id/et_blobPort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:enabled="false"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/str_hint_port"
+                    android:imeOptions="flagNoExtractUi"
+                    android:text="@string/release_blob_port" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_userService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_configuration_userservice" />
+
+            <EditText
+                android:id="@+id/et_userServiceUrl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="@string/str_hint_url"
+                android:imeOptions="flagNoExtractUi"
+                android:text="@string/release_url_userservice" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_tvume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_configuration_tvume" />
+
+            <EditText
+                android:id="@+id/et_tvumeUrl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="@string/str_hint_url"
+                android:imeOptions="flagNoExtractUi"
+                android:text="@string/release_url_tvume" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_tpds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_configuraion_tpds" />
+
+            <EditText
+                android:id="@+id/et_tpdsIp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="@string/str_hint_url"
+                android:imeOptions="flagNoExtractUi"
+                android:text="@string/release_url_tpds" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_tpc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_configuration_tpc" />
+
+            <EditText
+                android:id="@+id/et_tpcIp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="@string/str_hint_url"
+                android:imeOptions="flagNoExtractUi"
+                android:text="@string/release_url_tpc" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_alert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_configuration_alert" />
+
+            <EditText
+                android:id="@+id/et_alertIp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="@string/str_hint_url"
+                android:imeOptions="flagNoExtractUi"
+                android:text="@string/release_url_alert" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_voip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_configuration_voip" />
+
+            <EditText
+                android:id="@+id/et_voipUrl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="@string/str_hint_url"
+                android:imeOptions="flagNoExtractUi"
+                android:text="@string/release_url_voip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_uniformapi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_configuration_uniformapi" />
+
+            <EditText
+                android:id="@+id/et_uniformapi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="@string/str_hint_url"
+                android:imeOptions="flagNoExtractUi"
+                android:text="@string/release_url_uniformapi" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_configuration_newservice" />
+
+            <EditText
+                android:id="@+id/et_newuserservice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="@string/str_hint_url"
+                android:imeOptions="flagNoExtractUi"
+                android:text="@string/release_url_newuserservice" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_appkey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_configuration_app_key" />
+
+            <EditText
+                android:id="@+id/et_appkey"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="@string/str_hint_url"
+                android:imeOptions="flagNoExtractUi"
+                android:text="@string/release_url_appkey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_appsecret"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_configuration_app_secret" />
+
+            <EditText
+                android:id="@+id/et_appsecret"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="@string/str_hint_url"
+                android:imeOptions="flagNoExtractUi"
+                android:text="@string/release_url_appsecret" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_loglevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_log_level" />
+
+            <Spinner
+                android:id="@+id/spinner_logLevel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:entries="@array/log_level"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_supportBgMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_support_background_mode" />
+
+            <Switch
+                android:id="@+id/switch_supportBgMode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:textOff="@string/str_text_off"
+                android:textOn="@string/str_text_on" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/ABOUT_PANEL_WIDTH"
+    android:layout_height="fill_parent"
+    android:background="@drawable/border">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/resolution_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_button_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/text_resolution"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingTop="6dp"
+                android:text="Resolution"
+                android:textColor="@color/light_grey_2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/resolution_value"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="2dp"
+                android:text="1080x720"
+                android:textColor="@color/light_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/framerate_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_button_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/text_framerate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingTop="6dp"
+                android:text="Frame rate"
+                android:textColor="@color/light_grey_2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/framerate_value"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="2dp"
+                android:text="15P"
+                android:textColor="@color/light_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/colorformat_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_button_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/text_colorformat"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingTop="6dp"
+                android:text="Color format"
+                android:textColor="@color/light_grey_2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/colorformat_value"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="2dp"
+                android:text="1 color"
+                android:textColor="@color/light_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mode_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_button_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/text_mode"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingTop="6dp"
+                android:text="Enable IS+"
+                android:textColor="@color/light_grey_2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/mode_value"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="2dp"
+                android:text="True"
+                android:textColor="@color/light_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/switch_status_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_button_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/text_switch_status"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingTop="6dp"
+                android:text="@string/title_switch_status"
+                android:textColor="@color/light_grey_2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/switch_status_value"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="2dp"
+                android:text="@string/first_switch_status"
+                android:textColor="@color/light_grey" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonSetMetadata"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/setting_button_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="@string/str_title_metadata"
+            android:textColor="@color/light_grey_2"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/buttonSubSetting"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/setting_button_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="@string/menu_setting"
+            android:textColor="@color/light_grey_2"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/buttonTVUAlert"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/setting_button_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="@string/title_activity_alert"
+            android:textColor="@color/light_grey_2"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/buttonStream"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/setting_button_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="@string/stream"
+            android:textColor="@color/light_grey_2"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/buttonTwitter"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/setting_button_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="@string/twitter"
+            android:textColor="@color/light_grey_2"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/buttonTVUCC"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/setting_button_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="@string/title_activity_tvucc"
+            android:textColor="@color/light_grey_2"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/buttonMediaMind"
+            style="?android:attr/buttonBarButtonStyle"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/setting_button_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="@string/menu_media_mind"
+            android:textColor="@color/light_grey_2"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/buttonAbout"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="@string/menu_about"
+            android:textColor="@color/light_grey_2"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/button_blank"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_button_selector"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

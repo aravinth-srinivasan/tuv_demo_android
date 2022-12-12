@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/about_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:gravity="center">
+    
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+            >
+   <TextView android:id="@+id/tvu_title"
+       android:layout_width="match_parent"
+       android:layout_height = "30dp"
+       android:gravity="center"
+       android:textSize="20sp"
+       android:textStyle="bold"
+       android:text="TVU Anywhere"
+        />
+
+        <TextView
+            android:id="@+id/modle_info"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="left"
+            android:text="Model: TVU Anywhere TM6000"
+            android:textSize="14sp"
+            />
+
+     <TextView
+         android:id="@+id/pid_info"
+         android:layout_width="match_parent"
+         android:layout_height="20dp"
+         android:gravity="left"
+         android:text="PID: 1234 1234 1234 1234"
+         android:textSize="14sp"
+          />
+
+        <TextView
+            android:id="@+id/imei_info"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="left"
+            android:text="IMEI: 1234 1234 1234 1234"
+            android:textSize="12sp"
+            />
+     
+          <TextView
+         android:id="@+id/version"
+         android:layout_width="match_parent"
+         android:layout_height="20dp"
+         android:gravity="left"
+         android:text="Version: 1.1.1.1 build: 20"
+         android:textSize="14sp"
+         />
+          
+           <TextView
+         android:id="@+id/tvu_network"
+         android:layout_width="match_parent"
+         android:layout_height="20dp"
+         android:gravity="center"
+         android:text="Copyright\u00A92018 TVU"
+         android:textSize="14sp"
+  />
+           
+</LinearLayout>
+</LinearLayout>
